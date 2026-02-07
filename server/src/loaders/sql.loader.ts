@@ -1,5 +1,5 @@
 import { DBConfig } from '@config';
-import { TestModel } from '@models';
+import { DailyMetric, DomainWeight, InvestigationLog, PatternMemory } from '@models';
 import { logger } from '@utils';
 import { Sequelize } from 'sequelize-typescript';
 
@@ -40,7 +40,7 @@ export class SQLLoader {
         acquire: 30000,
         idle: 10000,
       },
-      models: [TestModel],
+      models: [DailyMetric, DomainWeight, InvestigationLog, PatternMemory],
       dialectOptions: {
         connectTimeout: 30000,
         ssl: {
