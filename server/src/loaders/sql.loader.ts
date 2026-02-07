@@ -1,5 +1,13 @@
 import { DBConfig } from '@config';
-import { DailyMetric, DomainWeight, InvestigationLog, PatternMemory } from '@models';
+import {
+  InvestigationLog,
+  PatternMemory,
+  ReconciliationDiscrepancy,
+  TransactionEntity,
+  ReconciliationRun,
+  Customer,
+  FraudAlert
+} from '@models';
 import { logger } from '@utils';
 import { Sequelize } from 'sequelize-typescript';
 
@@ -40,7 +48,15 @@ export class SQLLoader {
         acquire: 30000,
         idle: 10000,
       },
-      models: [DailyMetric, DomainWeight, InvestigationLog, PatternMemory],
+      models: [
+        InvestigationLog,
+        PatternMemory,
+        ReconciliationDiscrepancy,
+        TransactionEntity,
+        ReconciliationRun,
+        Customer,
+        FraudAlert
+      ],
       dialectOptions: {
         connectTimeout: 30000,
         ssl: {

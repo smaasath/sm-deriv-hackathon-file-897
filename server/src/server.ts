@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as moduleAlias from 'module-alias';
 
+
 moduleAlias.addAliases({
   '@config': path.join(__dirname, 'config'),
   '@constant': path.join(__dirname, 'constant'),
@@ -21,6 +22,7 @@ import { AppConfig } from '@config';
 import { ExpressLoader, SQLLoader } from '@loaders';
 import { HttpServer } from '@servers';
 import { logger } from '@utils';
+import { TransactionDao } from '@dao';
 
 class App {
   private httpServer: HttpServer;
@@ -47,3 +49,4 @@ class App {
 
 const app = new App();
 app.startServer();
+
