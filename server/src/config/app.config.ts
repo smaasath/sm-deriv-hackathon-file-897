@@ -36,7 +36,7 @@ const PROD_ALLOWED_ORIGINS: string[] = ['http://localhost:3000'];
 
 export const AppConfig = {
   APP_ENV: process.env.APP_ENV || defaultConfig.APP_ENV,
-  APP_PORT: defaultConfig.APP_PORT || parseInt(process.env.APP_PORT!, 10),
+  APP_PORT: process.env.PORT || 3999,
   APP_ALLOWED_ORIGINS:
     process.env.APP_ENV == ENVIRONMENTS.PRODUCTION ? PROD_ALLOWED_ORIGINS : ALLOWED_ORIGINS,
 };

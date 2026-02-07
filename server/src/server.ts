@@ -41,7 +41,7 @@ class App {
 
   public startServer(): void {
     const port = AppConfig.APP_PORT;
-    this.httpServer.listen(port, () => {
+    this.httpServer.listen(parseInt(port.toString()), () => {
       logger.info(`✅ Server started successfully on ports ${port}!`);
     });
   }
