@@ -19,7 +19,6 @@ const configSchema = {
   },
   required: [
     'APP_ENV',
-    'APP_PORT'
   ],
 };
 
