@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
+    "allowJs": true,
+    "declaration": true,
+    "noEmit": false,
+    "isolatedModules": false,
+    "target": "es6",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": "src",
+    "paths": {
+      "@config": ["config", "config/*"],
+      "@constant": ["constant", "constant/*"],
+      "@controllers": ["controllers", "controllers/*"],
+      "@dao": ["dao", "dao/*"],
+      "@dto": ["dto", "dto/*"],
+      "@enum": ["enum", "enum/*"],
+      "@interfaces": ["interfaces", "interfaces/*"],
+      "@loaders": ["loaders", "loaders/*"],
+      "@models": ["models", "models/*"],
+      "@responces": ["responces", "responces/*"],
+      "@routes": ["routes", "routes/*"],
+      "@servers": ["servers", "servers/*"],
+      "@services": ["services", "services/*"],
+      "@utils": ["utils", "utils/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src"],
+  "exclude": ["node_modules"]
+}
